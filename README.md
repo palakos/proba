@@ -1,5 +1,7 @@
 # Projekt Eszközök beadandó
 
+[![Build Status](https://travis-ci.com/palakos/proba.svg?branch=dev)](https://travis-ci.com/palakos/proba)
+
 ## Mappa tartalma
 
 - docs: ebben a mappában vannak az oldalhoz szükséges dokumentumok
