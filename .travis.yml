@@ -2,4 +2,30 @@ language: java
 jdk: oraclejdk8
 
 install: true
-script: mvn install
+script: ./mvnw clean install
+
+cache:
+  directories:
+  - $HOME/.m2
+
+  after_success:
+  - pwd
+  - mkdir $HOME/buildApk/
+  - ls -l
+  - cd $HOME/buildApk/
+  - pwd
+  - ls -l
+  - git config --global user.email "paldi.akos@gmail.com"
+  - git config --global user.name "palakos"
+  - git clone --depth=50 --branch=dev https://github.com/palakos/proba.git
+  - cd proba
+  - ls -l
+  - cp -r /home/travis/build/palakos/proba/target $HOME/buildApk/proba
+  - ls -l
+  - git add -f .
+  - git remote em origin
+  - git remote add origin https://palakos:$GITHUB_API_KEY@github.com/palakos/proba.git
+  - git add -f .
+  - git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed with Magic"
+  - git push -fq origin dev
+  - echo -e "Done with magic\n"
