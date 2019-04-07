@@ -1,6 +1,6 @@
 # Projekt Eszközök beadandó
 
-[![Build Status](https://travis-ci.com/palakos/proba.svg?branch=dev)](https://travis-ci.com/palakos/proba)
+[![Build Status](https://travis-ci.com/madam97/projekteszk.svg?branch=dev)](https://travis-ci.com/madam97/projekteszk)
 
 ## Mappa tartalma
 

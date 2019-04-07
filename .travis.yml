@@ -11,6 +11,6 @@ cache:
   directories:
   - $HOME/.m2
 
-  after_success:
+after_success:
   - ./mvnw clean test
 
